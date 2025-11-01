@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import Button from '../components/common/Button';
+import BaseButton from '../components/common/Button';
 
-const Header = ({ className }) => {
+const Header = ({ className, Button = BaseButton }) => {
   return (
     <header className={className || "header"}>
       <div className="header-container">

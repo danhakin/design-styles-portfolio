@@ -1,8 +1,16 @@
 import styled from 'styled-components';
 import BaseNewsletterForm from '../../../../components/sections/NewsletterForm';
+import Button from '../common/Button';
+import Input from '../common/Input';
+import Dropdown from '../common/Dropdown';
 import { minimalismTheme as theme } from '../../theme';
 
-const StyledNewsletterForm = styled(BaseNewsletterForm)`
+// Create a wrapper component that passes styled components as props
+const NewsletterFormWithStyledComponents = (props) => (
+  <BaseNewsletterForm {...props} Button={Button} Input={Input} Dropdown={Dropdown} />
+);
+
+const StyledNewsletterForm = styled(NewsletterFormWithStyledComponents)`
   max-width: 600px;
   margin: 0 auto;
   padding: ${theme.spacing[20]} ${theme.spacing[6]};

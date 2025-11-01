@@ -1,8 +1,15 @@
 import styled from 'styled-components';
 import BaseCardGrid from '../../../../components/sections/CardGrid';
+import Button from '../common/Button';
+import Card from '../common/Card';
 import { minimalismTheme as theme } from '../../theme';
 
-const StyledCardGrid = styled(BaseCardGrid)`
+// Create a wrapper component that passes styled components as props
+const CardGridWithStyledComponents = (props) => (
+  <BaseCardGrid {...props} Button={Button} Card={Card} />
+);
+
+const StyledCardGrid = styled(CardGridWithStyledComponents)`
   background-color: ${theme.colors.surface};
   padding: ${theme.spacing[20]} ${theme.spacing[6]};
 

@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 import BaseHeader from '../../../../layouts/Header';
+import Button from '../common/Button';
 import { minimalismTheme as theme } from '../../theme';
 
-const StyledHeader = styled(BaseHeader)`
+// Create a wrapper component that passes styled components as props
+const HeaderWithStyledComponents = (props) => (
+  <BaseHeader {...props} Button={Button} />
+);
+
+const StyledHeader = styled(HeaderWithStyledComponents)`
   background-color: ${theme.colors.white};
   border-bottom: ${theme.borderWidth.thin} solid ${theme.colors.border};
   padding: ${theme.spacing[4]} ${theme.spacing[6]};

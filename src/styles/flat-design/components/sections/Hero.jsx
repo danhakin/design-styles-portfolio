@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 import BaseHero from '../../../../components/sections/Hero';
+import Button from '../common/Button';
 import { flatDesignTheme as theme } from '../../theme';
 
-const StyledHero = styled(BaseHero)`
+// Create a wrapper component that passes styled components as props
+const HeroWithStyledComponents = (props) => (
+  <BaseHero {...props} Button={Button} />
+);
+
+const StyledHero = styled(HeroWithStyledComponents)`
   max-width: ${theme.layout.maxWidth};
   margin: ${theme.spacing[8]} auto 0;
   padding: ${theme.spacing[20]} ${theme.spacing[8]};
