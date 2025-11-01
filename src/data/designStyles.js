@@ -25,7 +25,7 @@ export const designStyles = [
     name: 'Neobrutalism',
     description: 'Bold, raw aesthetic with heavy borders and stark contrast.',
     characteristics: ['Bold Borders', 'High Contrast', 'Raw', 'Playful'],
-    implemented: false,
+    implemented: true,
   },
   {
     id: 'neumorphism',
