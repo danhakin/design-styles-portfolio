@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Input from '../common/Input';
-import Dropdown from '../common/Dropdown';
-import Button from '../common/Button';
+import BaseInput from '../common/Input';
+import BaseDropdown from '../common/Dropdown';
+import BaseButton from '../common/Button';
 
-const NewsletterForm = ({ className }) => {
+const NewsletterForm = ({ className, Input = BaseInput, Dropdown = BaseDropdown, Button = BaseButton }) => {
   const [formData, setFormData] = useState({
     email: '',
     name: '',

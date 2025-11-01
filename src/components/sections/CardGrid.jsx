@@ -1,7 +1,7 @@
-import Card from '../common/Card';
-import Button from '../common/Button';
+import BaseCard from '../common/Card';
+import BaseButton from '../common/Button';
 
-const CardGrid = ({ className }) => {
+const CardGrid = ({ className, Card = BaseCard, Button = BaseButton }) => {
   const templates = [
     {
       id: 1,
