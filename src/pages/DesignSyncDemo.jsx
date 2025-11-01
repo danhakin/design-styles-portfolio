@@ -1,9 +1,23 @@
+import Header from '../layouts/Header';
+import Footer from '../layouts/Footer';
+import Hero from '../components/sections/Hero';
+import Features from '../components/sections/Features';
+import CardGrid from '../components/sections/CardGrid';
+import NewsletterForm from '../components/sections/NewsletterForm';
+import StyleSwitcher from '../components/meta/StyleSwitcher';
+
 const DesignSyncDemo = () => {
   return (
-    <div>
-      <h1>DesignSync Demo</h1>
-      <p>This page will showcase the DesignSync interface with style switching capabilities.</p>
-      <p><em>Full demo implementation coming soon...</em></p>
+    <div className="design-sync-demo">
+      <StyleSwitcher />
+      <Header />
+      <main>
+        <Hero />
+        <Features />
+        <CardGrid />
+        <NewsletterForm />
+      </main>
+      <Footer />
     </div>
   );
 };
