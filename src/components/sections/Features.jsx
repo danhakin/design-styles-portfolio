@@ -1,4 +1,4 @@
-const Features = () => {
+const Features = ({ className }) => {
   const features = [
     {
       id: 1,
@@ -27,7 +27,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="features">
+    <section className={className || "features"}>
       <h2 className="section-heading">Why teams choose DesignSync</h2>
       <div className="features-grid">
         {features.map((feature) => (

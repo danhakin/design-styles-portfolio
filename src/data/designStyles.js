@@ -4,7 +4,7 @@ export const designStyles = [
     name: 'Minimalism',
     description: 'Clean, simple design with emphasis on space and essential elements only.',
     characteristics: ['Simple', 'Clean', 'Spacious', 'Monochromatic'],
-    implemented: false,
+    implemented: true,
   },
   {
     id: 'flat-design',

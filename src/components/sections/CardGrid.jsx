@@ -1,7 +1,7 @@
 import Card from '../common/Card';
 import Button from '../common/Button';
 
-const CardGrid = () => {
+const CardGrid = ({ className }) => {
   const templates = [
     {
       id: 1,
@@ -36,20 +36,22 @@ const CardGrid = () => {
   ];
 
   return (
-    <section className="card-grid-section">
-      <h2 className="section-heading">Explore design templates</h2>
-      <div className="card-grid">
-        {templates.map((template) => (
-          <Card key={template.id} title={template.title}>
-            <div className="card-image-placeholder" style={{ width: '100%', height: '200px', background: '#e0e0e0', marginBottom: '1rem' }}>
-              Template Image
-            </div>
-            <p>{template.description}</p>
-            <Button variant="secondary" size="small">
-              View Template
-            </Button>
-          </Card>
-        ))}
+    <section className={className || "card-grid-section"}>
+      <div className="card-grid-container">
+        <h2 className="section-heading">Explore design templates</h2>
+        <div className="card-grid">
+          {templates.map((template) => (
+            <Card key={template.id} title={template.title}>
+              <div className="card-image-placeholder" style={{ width: '100%', height: '200px', background: '#e0e0e0', marginBottom: '1rem' }}>
+                Template Image
+              </div>
+              <p>{template.description}</p>
+              <Button variant="secondary" size="small">
+                View Template
+              </Button>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );
