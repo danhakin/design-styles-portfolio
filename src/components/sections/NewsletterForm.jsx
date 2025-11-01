@@ -3,7 +3,7 @@ import Input from '../common/Input';
 import Dropdown from '../common/Dropdown';
 import Button from '../common/Button';
 
-const NewsletterForm = () => {
+const NewsletterForm = ({ className }) => {
   const [formData, setFormData] = useState({
     email: '',
     name: '',
@@ -29,7 +29,7 @@ const NewsletterForm = () => {
   };
 
   return (
-    <section className="newsletter-form-section">
+    <section className={className || "newsletter-form-section"}>
       <div className="form-container">
         <h2 className="section-heading">Join our newsletter</h2>
         <p className="form-description">

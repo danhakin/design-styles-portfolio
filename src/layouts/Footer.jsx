@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 
-const Footer = () => {
+const Footer = ({ className }) => {
   return (
-    <footer className="footer">
+    <footer className={className || "footer"}>
       <div className="footer-container">
         <div className="footer-section footer-brand">
           <div className="footer-logo">DesignSync</div>

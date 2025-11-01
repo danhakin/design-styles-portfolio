@@ -1,8 +1,8 @@
 import Button from '../common/Button';
 
-const Hero = () => {
+const Hero = ({ className }) => {
   return (
-    <section className="hero">
+    <section className={className || "hero"}>
       <div className="hero-content">
         <h1 className="hero-headline">
           Collaborate on designs like never before

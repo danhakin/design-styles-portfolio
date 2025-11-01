@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import Button from '../components/common/Button';
 
-const Header = () => {
+const Header = ({ className }) => {
   return (
-    <header className="header">
+    <header className={className || "header"}>
       <div className="header-container">
         <Link to="/" className="logo">
           DesignSync
