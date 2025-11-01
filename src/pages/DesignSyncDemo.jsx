@@ -11,6 +11,7 @@ import BaseNewsletterForm from '../components/sections/NewsletterForm';
 
 // Style implementations
 import * as Minimalism from '../styles/minimalism';
+import * as FlatDesign from '../styles/flat-design';
 
 const DesignSyncDemo = () => {
   const { currentStyle } = useStyle();
@@ -21,6 +22,9 @@ const DesignSyncDemo = () => {
   switch (currentStyle.id) {
     case 'minimalism':
       ({ Header, Footer, Hero, Features, CardGrid, NewsletterForm } = Minimalism);
+      break;
+    case 'flat-design':
+      ({ Header, Footer, Hero, Features, CardGrid, NewsletterForm } = FlatDesign);
       break;
     default:
       // Use base components for unimplemented styles
