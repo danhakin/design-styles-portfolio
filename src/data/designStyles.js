@@ -11,7 +11,7 @@ export const designStyles = [
     name: 'Flat Design',
     description: 'Two-dimensional design with bold colors and simple shapes.',
     characteristics: ['2D', 'Bright Colors', 'Simple Shapes', 'No Shadows'],
-    implemented: false,
+    implemented: true,
   },
   {
     id: 'material-design',
